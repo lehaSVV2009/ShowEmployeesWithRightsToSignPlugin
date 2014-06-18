@@ -1,0 +1,296 @@
+<div data-dojo-type="dijit.layout.BorderContainer" gutters="false" data-dojo-attach-point="ecmSearchDialogContainer">
+
+    <div data-dojo-type="dijit.layout.ContentPane" region="center" data-dojo-attach-point="generalContentPane"
+         style="padding:0;">
+
+        <div data-dojo-type="idx.layout.TitlePane" title="Search Pane"
+             data-dojo-attach-point="searchTitlePane">
+
+            <div class="searchFormArea" role="search">
+                <table class="ecmSearchFormInputArea" data-dojo-attach-point="searchFormInputArea" role="presentation">
+                    <tbody>
+
+                    <tr class="ecmSearchFormFieldArea">
+                        <td class="fieldCell">
+                            <label for="currentDate">
+                                By Current Date:
+                            </label>
+                        </td>
+                        <td class="fieldCell">
+                            <div id="currentDate"
+                                 name="currentDate"
+                                 data-dojo-type="idx.form.DateTextBox"
+                                 placeholder=""
+                                 labelType="text"
+                                 label="label"
+                                 searchAttr="label"
+                                 identifier="value"
+                                 data-dojo-attach-point="currentDateValue"
+                                    >
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="ecmSearchFormFieldArea">
+                        <td class="fieldCell">
+                            <label for="lastDate">
+                                Last Date:
+                            </label>
+                        </td>
+                        <td class="fieldCell">
+                            <div id="lastDate"
+                                 name="lastDate"
+                                 data-dojo-type="idx.form.DateTextBox"
+                                 placeholder=""
+                                 labelType="text"
+                                 label="label"
+                                 searchAttr="label"
+                                 identifier="value"
+                                 data-dojo-attach-point="lastDateValue">
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="ecmSearchFormFieldArea">
+                        <td class="fieldCell">
+                            <label for="structuralUnit">
+                                Structural Unit:
+                            </label>
+                        </td>
+                        <td class="fieldCell">
+                            <div id="structuralUnit"
+                                 name="structuralUnit"
+                                 data-dojo-type="ecm.widget.ComboBox"
+                                 placeholder=""
+                                 labelType="text"
+                                 label="label"
+                                 searchAttr="label"
+                                 identifier="value"
+                                 data-dojo-attach-point="structuralUnitValue"
+                                    >
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="ecmSearchFormFieldArea">
+                        <td class="fieldCell">
+                            <label for="employeeName">
+                                Employee Name:
+                            </label>
+                        </td>
+                        <td class="fieldCell" >
+                            <div id="employeeName"
+                                 name="employeeName"
+                                 data-dojo-type="ecm.widget.TextBox"
+                                 placeholder=""
+                                 labelType="text"
+                                 label="label"
+                                 searchAttr="label"
+                                 identifier="value"
+                                 data-dojo-attach-point="employeeNameValue"
+                                    >
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="ecmSearchFormFieldArea">
+                        <td class="fieldCell">
+                            <label for="employeeSurname">
+                                Employee Surname:
+                            </label>
+                        </td>
+                        <td class="fieldCell">
+                            <div id="employeeSurname"
+                                 name="employeeSurname"
+                                 data-dojo-type="ecm.widget.TextBox"
+                                 placeholder=""
+                                 labelType="text"
+                                 label="label"
+                                 searchAttr="label"
+                                 identifier="value"
+                                 data-dojo-attach-point="employeeSurnameValue"
+                                    >
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="ecmSearchFormFieldArea">
+                        <td class="fieldCell">
+                            <label for="employeeNumber">
+                                Employee Number:
+                            </label>
+                        </td>
+                        <td class="fieldCell">
+                            <div id="employeeNumber"
+                                 name="employeeNumber"
+                                 data-dojo-type="ecm.widget.TextBox"
+                                 placeholder=""
+                                 labelType="text"
+                                 label="label"
+                                 searchAttr="label"
+                                 identifier="value"
+                                 data-dojo-attach-point="employeeNumberValue">
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="ecmSearchFormFieldArea">
+                        <td class="fieldCell">
+                            <label for="documents">
+                                Documents:
+                            </label>
+                        </td>
+                        <td class="fieldCell">
+                            <div id="documents"
+                                 name="documents"
+                                 data-dojo-type="ecm.widget.Select"
+                                 placeholder=""
+                                 labelType="text"
+                                 label="label"
+                                 searchAttr="label"
+                                 identifier="value"
+                                 data-dojo-attach-point="documentsValue">
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="ecmSearchFormFieldArea">
+                        <td class="fieldCell">
+                            <label for="ecardStatus">
+                                ECard status:
+                            </label>
+                        </td>
+                        <td class="fieldCell">
+                            <div id="ecardStatus"
+                                 name="ecardStatus"
+                                 data-dojo-type="ecm.widget.ComboBox"
+                                 placeholder=""
+                                 labelType="text"
+                                 label="label"
+                                 searchAttr="label"
+                                 identifier="value"
+                                 data-dojo-attach-point="ecardStatus">
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="ecmSearchFormFieldArea">
+                        <td class="fieldCell">
+                            <label for="signatureAttributeOfAction">
+                                Signature nature:
+                            </label>
+                        </td>
+                        <td class="fieldCell">
+                            <div id="signatureAttributeOfAction"
+                                 name="signatureAttributeOfAction"
+                                 data-dojo-type="ecm.widget.ComboBox"
+                                 placeholder=""
+                                 labelType="text"
+                                 label="label"
+                                 searchAttr="label"
+                                 identifier="value"
+                                 data-dojo-attach-point="signatureAttributeOfAction">
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="ecmSearchFormFieldArea">
+                        <td class="fieldCell">
+                            <label for="signatureNature">
+                                Signature nature:
+                            </label>
+                        </td>
+                        <td class="fieldCell">
+                            <div id="signatureNature"
+                                 name="signatureNature"
+                                 data-dojo-type="ecm.widget.ComboBox"
+                                 placeholder=""
+                                 labelType="text"
+                                 label="label"
+                                 searchAttr="label"
+                                 identifier="value"
+                                 data-dojo-attach-point="signatureNature">
+                            </div>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div data-dojo-attach-point="searchBottomArea" class="searchBottomArea">
+                <button data-dojo-attach-point="searchButton" data-dojo-type="dijit.form.Button"
+                        data-dojo-attach-event="onClick:_search" class="idxSpecialButton searchTabButton">
+                    ${messages.search}
+                </button>
+                <button data-dojo-attach-point="resetButton" data-dojo-type="dijit.form.Button"
+                        data-dojo-attach-event="onClick:_reset">${messages.reset}
+                </button>
+            </div>
+
+        </div>
+
+        <div data-dojo-type="idx.layout.TitlePane" title="Results Pane"
+             data-dojo-attach-point="resultsTitlePane">
+            Results Pane
+        </div>
+
+    </div>
+</div>
+
+<!--<div data-dojo-type="dijit.layout.BorderContainer" gutters="false" data-dojo-attach-point="ecmSearchDialogContainer">
+
+    <div data-dojo-type="dijit.layout.ContentPane" region="center" data-dojo-attach-point="addContentItemTabContainer"
+         style="padding:0;">
+
+        <div data-dojo-type="ecm.widget.search.SearchTab">
+
+        </div>
+
+    </div>
+</div>-->
+
+
+<!--        <div data-dojo-type="idx.layout.TitlePane" title="YAHOO"
+         class="addContentItemGeneralTitlePane" data-dojo-attach-point="addContentItemGeneralTitlePane">
+        <div data-dojo-attach-point="addContentItemGeneralPane"
+             data-dojo-type="ecm.widget.AddContentItemGeneralPane">
+        </div>
+    </div>
+    <div data-dojo-type="idx.layout.TitlePane" title="TITLE PANE"
+         class="addContentItemPropertiesTitlePane" data-dojo-attach-point="addContentItemPropertiesTitlePane">
+        <div data-dojo-attach-point="addContentItemPropertiesPane"
+             data-dojo-type="ecm.widget.AddContentItemPropertiesPane">
+
+            <div data-dojo-type="idx.form.DateTextBox"></div>
+
+            <div data-dojo-type="idx.form.DateTextBox"></div>
+
+            <div data-dojo-type="ecm.widget.ComboBox"></div>
+
+            <div data-dojo-type="ecm.widget.TextBox"></div>
+
+            <div data-dojo-type="ecm.widget.TextBox"></div>
+
+            <div data-dojo-type="ecm.widget.TextBox"></div>
+
+            <div data-dojo-type="ecm.widget.TextBox"></div>
+
+            <div data-dojo-type="ecm.widget.MultiValueChoicePane"></div>
+
+            <div data-dojo-type="ecm.widget.ComboBox"></div>
+
+            <div data-dojo-type="ecm.widget.ComboBox"></div>
+
+            <div data-dojo-type="ecm.widget.ComboBox"></div>
+
+        </div>
+    </div>
+    <div data-dojo-type="idx.layout.TitlePane" title="SECURITY PANE"
+         class="addContentItemSecurityTitlePane" data-dojo-attach-point="addContentItemSecurityTitlePane">
+        <div data-dojo-attach-point="addContentItemSecurityPane"
+             data-dojo-type="ecm.widget.AddContentItemSecurityPane">
+        </div>
+    </div>-->
+
+<!---->

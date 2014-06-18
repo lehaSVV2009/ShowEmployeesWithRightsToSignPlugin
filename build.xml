@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project name="ShowEmployeesWithRightsToSignPlugin" default="all" basedir=".">
+    <property name="NAVIGATORAPI" value="./lib"/>
+    <property name="VERSION" value="0.1.1"/>
+    <property name="DeployDir" value="d:\kadet\Tools\webSphere\WebSphere\profiles\BelWebSrvTrue\installedApps\SAROKA-AINode03Cell\navigator.ear\navigator.war"/>
+    <tstamp>
+        <format property="CURRENT_TIME" pattern="yyyy/MM/dd hh:mm:ss" />
+    </tstamp>
+    <path id="classpath">
+        <fileset id="NAVIGATORAPI" dir="${NAVIGATORAPI}">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+
+    <!--==============TARGETS==============-->
+    <target name="all" depends="clean,compile,jar,deploy"/>
+
+    <target name="clean">
+        <delete dir="target"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="target"/>
+        <filter token="BUILD_INFO" value="${VERSION} (${CURRENT_TIME})" />
+        <copy todir="target/src-filtering" filtering="true">
+            <fileset dir="src">
+                <filename name="**/*.java" />
+            </fileset>
+        </copy>
+        <javac srcdir="target/src-filtering" destdir="target" source="1.6" target="1.6"
+               debug="true">
+            <classpath refid="classpath"/>
+            <include name="**/*.java"/>
+        </javac>
+    </target>
+
+    <target name="jar">
+        <copy todir="target">
+            <fileset dir="src">
+                <include name="**/WebContent/**"/>
+            </fileset>
+        </copy>
+        <jar jarfile="ShowEmployeesWithRightsToSignPlugin.jar">
+            <fileset dir="./target" includes="**/*"/>
+            <manifest>
+                <attribute name="Plugin-Class"
+                           value="com.ibm.ecm.extension.ShowEmployeesWithRightsToSignPlugin.ShowEmployeesWithRightsToSignPlugin"/>
+                <section name="build">
+                    <attribute name="Built-By" value="${user.name}"/>
+                    <attribute name="Build" value="${TODAY}"/>
+                </section>
+            </manifest>
+        </jar>
+        <delete dir="./target"/>
+    </target>
+
+    <target name="deploy">
+        <copy todir="${DeployDir}">
+            <fileset dir=".">
+                <include name="**/ShowEmployeesWithRightsToSignPlugin.jar"/>
+            </fileset>
+        </copy>
+    </target>
+</project>
