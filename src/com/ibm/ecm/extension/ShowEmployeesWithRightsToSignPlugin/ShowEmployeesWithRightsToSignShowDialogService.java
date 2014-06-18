@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.ibm.ecm.extension.PluginService;
 import com.ibm.ecm.extension.PluginServiceCallbacks;
 
-public class ShowEmployeesWithRightsToSignService extends PluginService {
+public class ShowEmployeesWithRightsToSignShowDialogService extends PluginService {
 
     @Override
     public void execute(PluginServiceCallbacks arg0, HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -22,7 +22,7 @@ public class ShowEmployeesWithRightsToSignService extends PluginService {
 
     @Override
     public String getId() {
-        return ShowEmployeesWithRightsToSignStructInfo.ID + TextConstants.SERVICE_SUFFIX;
+        return ShowEmployeesWithRightsToSignStructInfo.ID + TextConstants.SHOW_SEARCH_DIALOG_SERVICE + TextConstants.SERVICE_SUFFIX;
     }
 
 }

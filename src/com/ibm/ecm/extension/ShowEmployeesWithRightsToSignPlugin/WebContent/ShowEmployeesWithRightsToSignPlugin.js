@@ -18,7 +18,7 @@ function serviceCall (item, action, callback) {
 
     ecm.model.Request.invokePluginService(
         "ShowEmployeesWithRightsToSignPlugin",
-        "ShowEmployeesWithRightsToSignService",
+        "ShowEmployeesWithRightsToSignShowDialogService",
         {
             requestParams: serviceParams,
             requestCompleteCallback: function(response){

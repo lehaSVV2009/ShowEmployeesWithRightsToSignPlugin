@@ -37,13 +37,13 @@ public class ShowEmployeesWithRightsToSignPlugin extends Plugin {
 	@Override
 	public PluginService[] getServices() {
 		return new PluginService[] {
-				new ShowEmployeesWithRightsToSignService()
+				new ShowEmployeesWithRightsToSignShowDialogService(),
+                new ShowEmployeesWithRightsToSignSearchService()
 		};
 	}
 
 	@Override
 	public String getScript() {
-		System.out.println("Kadet!Get Script!!!");
 		return SCRIPT;
 	}
 	
@@ -55,12 +55,5 @@ public class ShowEmployeesWithRightsToSignPlugin extends Plugin {
     {
         return DOJO_MODULE;
     }
-
-/*
-	@Override
-	public String getConfigurationDijitClass() {
-		return "samplePluginDojo.CloseAccountConfigPane";
-	}
-*/
 	
 }
